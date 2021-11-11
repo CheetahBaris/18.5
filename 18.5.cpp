@@ -18,7 +18,7 @@ public:
 		arr[size--];
 
 	}
-
+	 
 };
 
 	void FillArr(int* const arr, const int size)
@@ -52,19 +52,20 @@ int main()
 	int size = 1;
 
 	int* arr = new int[size];
+	delete[] arr;
 
 	FillArr(arr, size);
 
 	v.push(arr, size, 2);
 	v.push(arr, size, 1);
-	v.push(arr, size, 4);
+	v.push(arr, size, 5);
 
 	 ShowArr(arr, size);
 
 	v.pop(arr, size);
 
 	 ShowArr(arr, size);
-
+	 
 	return 0;
 }
 
