@@ -21,48 +21,51 @@ public:
 
 };
 
-void FillArr(int* const arr, const int size)
-{
-
-	for (int i = 0; i < size; i++)
-	{
-		arr[i] = rand() % 10;
-
-	}
-
-}
-void ShowArr(const int* const arr, const int size)
-{
-	for (int i = 0; i < size; i++)
+	void FillArr(int* const arr, const int size)
 	{
 
-		std::cout << arr[i] << "\t";
+		for (int i = 1; i < size; i++)
+		{
+			arr[i] = rand() % 10;
+
+		}
+
+	}
+	void ShowArr(const int* const arr, const int size)
+	{
+		for (int i = 1; i < size; i++)
+		{
+
+			std::cout << arr[i] << "\t";
+
+
+		}
 
 
 	}
-
-
-}
 
 int main()
 {
-	setlocale(LC_ALL, "Rus");
+
 
 	Stack v;
 	int size = 1;
+
 	int* arr = new int[size];
 
 	FillArr(arr, size);
 
 	v.push(arr, size, 2);
 	v.push(arr, size, 1);
-	v.push(arr, size, 9);
+	v.push(arr, size, 4);
 
-	ShowArr(arr, size);
+	 ShowArr(arr, size);
 
 	v.pop(arr, size);
 
-	ShowArr(arr, size);
+	 ShowArr(arr, size);
 
 	return 0;
 }
+
+
